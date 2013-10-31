@@ -9,7 +9,7 @@ I decided to implement my own patch method, since that is the muscle that we are
 </p>
 
 ```csharp
-    public abstract class MyModel
+    public abstract class AbstractModel
     {
         public void Patch(Object u)
         {
@@ -27,7 +27,7 @@ I decided to implement my own patch method, since that is the muscle that we are
     }
 ```
 <p>
-Then i make all my model classes inherit from *MyModel*. note the line where i use *let*, i will excplain that later. So now you can remove the Delta<Entry> from you controller action, and just make it Entry again, as with the put method. e.g.
+Then i make all my model classes inherit from *AbstractModel*. note the line where i use *let*, i will excplain that later. So now you can remove the Delta<Entry> from you controller action, and just make it Entry again, as with the put method. e.g.
 </p>
 
 ```csharp
@@ -57,7 +57,7 @@ I found it a security risk that just any property would be able to be updated wi
 You can use it just like any other attribute:
 
 ```csharp
-    public class User : MyModel
+    public class User : AbstractModel
     {
         [NotPatchable]
         public int ID { get; set; }
