@@ -5,6 +5,8 @@ Asp.netMVCPatchExample
 Different people have ran with this idea, one of them is: [https://github.com/viklele/DeltaPatcher]
 I would definitely recommend checking this out as well.
 
+
+#### Example
 An example of how to implement a patch method, similar to the Patch from Delta of oData...
 
 I found it incredibly annoying that oDatas patch was case sensitive, thus i decided to do away with the whole oData part, since it is a huge library that we are abusing....<br></p>
